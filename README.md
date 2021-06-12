@@ -1,3 +1,12 @@
+# Setting this up
+
+* Run `npm install` to install dependencies
+* Run `npm start` to start the application
+* If your browser hasn't opened already, go to `localhost:3000` in your browser
+    to see the app.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
