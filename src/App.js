@@ -1,21 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import Numbers from './components/Numbers'
 
 function App() {
-  const [num, setNum] = useState(0);
-
-  useEffect(() => {
-    console.log('useEffect function', num);
-    return function () {
-      console.log('useEffect cleanup', num);
-    }
-  }, [num]);
+  const [showNumbers, setShowNumbers] = useState(true);
 
   return (
-    <div>
-      <h1>{num}</h1>
-      <button onClick={() => setNum((prevNum) => prevNum + 1)}>Inc</button>
-      <button onClick={() => setNum((prevNum) => prevNum - 1)}>Dec</button>
-    </div>
+    <>
+      <button onClick={() => setShowNumbers(!showNumbers)}>Toggle Numbers Component</button>
+      {showNumbers && <Numbers />}
+    </>
   );
 }
 
